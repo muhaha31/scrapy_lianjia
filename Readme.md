@@ -21,4 +21,4 @@ class ProxyMiddleware(object):
 
 ##可视化
 
-数据存入后，通过 `utils.py` 将数据从mongodb写入excel，上传到[bdp.cn](bdp.cn)来做可视化展示。
+数据存入后，通过 `utils.py` 将数据从mongodb写入excel，上传到[http://bdp.cn](http://bdp.cn)来做可视化展示。
