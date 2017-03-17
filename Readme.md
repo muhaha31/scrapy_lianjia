@@ -2,12 +2,13 @@
 
 
 
-为防止被ban，在ProxyMiddleware中使用[data5u.com](data5u.com)的动态代理来获取代理IP。
+为防止被ban，在ProxyMiddleware中使用[http://data5u.com](http://data5u.com)的动态代理来获取代理IP。
 
 ```python
 class ProxyMiddleware(object):
     def process_request(self, request, spider):
-        apiUrl = "http://api.ip.data5u.com/dynamic/get.html?order=08903ff28b3c5147a042d2585211e257";
+        order = ''
+        apiUrl = "http://api.ip.data5u.com/dynamic/get.html?order=" + order;
         try:
             res = urllib.urlopen(apiUrl).read().strip("\n");
             ips = res.split("\n");
